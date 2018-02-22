@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Experiment</title>
+<meta name="viewport" content="target-densitydpi=device-dpi; width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+<meta name="HandheldFriendly" content="true" />
+<link href="css/experiment.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-2.1.3.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/TweenMax.min.js"></script>
+<script src="js/logo-preloader.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <svg class="loading" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+             width="120px" height="43.8px" viewBox="0 0 275 105" enable-background="new 0 0 275 105" xml:space="preserve">
+          <defs>
+            <pattern id="water" width=".25" height="1.1" patternContentUnits="objectBoundingBox">
+              <path fill="#4d4d4d" d="M0.25,1H0c0,0,0-0.659,0-0.916c0.083-0.303,0.158,0.334,0.25,0C0.25,0.327,0.25,1,0.25,1z"/>
+            </pattern>
+            
+            <!-- <text id="text" transform="matrix(1 0 0 1 -8.0684 116.7852)" font-family="'Cabin Condensed'" font-size="161.047">BIMATA</text> -->
+
+            <g id="text">
+                <path d="M196.116,100.001L275 100.001 245.417 65.202 z"></path>
+
+                <path d="M190.001,0.001L190.001 36.473 221.002 36.473 z"></path>
+
+                <path d="M275,40.004L189.996 100.001 189.996 40.004 275 40.004 "></path>
+
+                <path d="M179.749,0.001L94.998 0.001 94.998 63.115 z"></path>
+
+                <path d="M94.998,67.151L94.998 100.001 169.999 40.004 131.458 40.004 z"></path>
+
+                <path d="M58.792,60.004L58.799 60.004 0 100.001 84.999 100.001 84.999 42.181 z"></path>
+
+                <path d="M54.996,0.001L54.996 23.062 84.999 0.001 z"></path>
+
+                <path d="M52.464,60.004L84.999 37.868 84.999 23.062 54.996 23.062 54.996 23.062 6.952 60.004 z"></path>
+            </g>
+            
+            <mask id="text-mask">
+              <use x="0" y="0" xlink:href="#text" opacity="1" fill="#ffffff"/>
+            </mask>
+          </defs>
+         
+              <use x="0" y="0" xlink:href="#text" fill="#222"/>
+          
+          <rect class="water-fill" mask="url(#text-mask)" fill="url(#water)" x="-400" y="0" width="1600" height="120"/>
+          
+        </svg>
+    </div>   
+</body>
+</html>

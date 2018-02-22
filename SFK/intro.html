@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Skinny Fat Kids Worldwide</title>
+<link href="http://allfont.net/allfont.css?fonts=montserrat-hairline" rel="stylesheet" type="text/css" />
+<link href="http://allfont.net/allfont.css?fonts=montserrat-light" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/sfk.css">
+<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+<script src="js/TweenMax.min.js"></script>
+</head>
+
+<body>
+	<div class="wrapper">
+        <div class="logo">
+            <img src="images/img_sfklogo.png">
+        </div>
+        <div class="separator"></div>
+        <h3 class="motto">IF WE ARE THINKING<br>WE MIGHT AS WELL THINK BIG</h3>
+        <nav>
+            <ul>
+                <li class="active"><a href="#">WHO</a></li>
+                <li><a href="#">WHY</a></li>
+                <li><a href="#">WHAT</a></li>
+                <li><a href="#">WHERE</a></li>
+            </ul>
+        </nav>
+    </div>
+<script>
+	var mainlogo = $('.logo'),
+		separator = $('.separator'),
+		motto = $('.motto'),
+		nav = $('nav ul li');
+	
+	TweenLite.set(motto, {opacity:0});
+	TweenLite.set(separator, {opacity:0});
+	TweenLite.set(nav, {opacity:0});
+	
+	var intro = new TimelineLite();
+	
+	intro.add(TweenMax.to(mainlogo, 1, {left:'37%'}));
+	intro.add(TweenMax.to(separator, 0.5, {height:'100px', opacity:1, delay: 0.5}));
+	intro.add(TweenMax.to(motto, 1.5, {opacity:1}));
+	intro.add(TweenMax.to(motto, 1, {opacity:0, delay:3}));
+	intro.add(TweenMax.staggerTo(nav, 1, {opacity:1}, 0.3));
+	
+	//intro.to(mainlogo, 1, {left: '37%'}).to(separator, 0.5, {height:'100px', opacity:1}, '+=0.5').to(motto, 1.5, {opacity:1}, '+=2').to(motto, 1.5, {opacity:0}, '+=2').staggerTo(nav, 1, {opacity:1}, 1);
+
+</script>
+</body>
+</html>

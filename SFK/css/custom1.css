@@ -1,0 +1,189 @@
+/* Demo 1 */
+
+.sfkLogo {
+	height:100vh;
+	display:block;
+	margin-top:120px;
+}
+
+.one,
+.two,
+.three {
+	height:100vh;
+	display:block;
+}
+
+.four {
+	min-height:100vh;
+	display:block;
+}
+
+.sfkLogo .uc-container,
+.one .uc-container,
+.two .uc-container,
+.three .uc-container {
+	width: 200px;
+	height: 200px;
+	margin: 60px auto;
+}
+
+.sfkLogo .uc-single, 
+.sfkLogo .uc-final,
+.sfkLogo .uc-initial-content,
+.sfkLogo .uc-back,
+.sfkLogo .uc-front,
+.one .uc-single, 
+.one .uc-final,
+.one .uc-initial-content,
+.one .uc-back,
+.one .uc-front,
+.two .uc-single, 
+.two .uc-final,
+.two .uc-initial-content,
+.two .uc-back,
+.two .uc-front,
+.three .uc-single, 
+.three .uc-final,
+.three .uc-initial-content,
+.three .uc-back,
+.three .uc-front,
+.demo-2 .uc-single, 
+.demo-2 .uc-final,
+.demo-2 .uc-initial-content,
+.demo-2 .uc-back,
+.demo-2 .uc-front {
+	background:#000 url(../userdata/sfk_1x1.jpg) repeat center center;
+	background-size:cover;
+}
+
+.sfkLogo .uc-initial-content,
+.one .uc-initial-content,
+.two .uc-initial-content,
+.three .uc-initial-content,
+.demo-2 .uc-initial-content {
+	background:#000 url(../userdata/sfk_1x1.jpg) repeat center center;
+	background-size:cover;
+}
+
+.sfkLogo .uc-final,
+.one .uc-final,
+.two .uc-final,
+.three .uc-final,
+.demo-2 .uc-final {
+	background:#000 url(../userdata/sfk_2x4.jpg) repeat center center;
+	background-size:cover;
+}
+
+.sfkLogo span.clickme {
+    display: block;
+    float: right;
+    color: transparent;
+    width: 136px;
+    height: 71px;
+    margin: 1 5px 0 0 0px;
+    cursor: pointer;
+    background: transparent url(../images/clickme.png) no-repeat center center;
+}
+
+.demo-2 .uc-container span.clickme {
+	display: block;
+    float: left;
+	color: transparent;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.demo-2 .uc-container:nth-child(1) span.clickme {
+	background: transparent url(../userdata/icon_facilities_brandstewardship.png) no-repeat center center;
+}
+
+.demo-2 .uc-container:nth-child(2) span.clickme {
+	background: transparent url(../userdata/icon_facilities_planing.png) no-repeat center center;
+}
+
+.demo-2 .uc-container:nth-child(3) span.clickme {
+	background: transparent url(../userdata/icon_facilities_visualcommunication.png) no-repeat center center;
+}
+
+.demo-2 .uc-container:nth-child(4) span.clickme {
+	background: transparent url(../userdata/icon_facilities_multimedia.png) no-repeat center center;
+}
+
+.demo-2 .uc-container:nth-child(5) span.clickme {
+	background: transparent url(../userdata/icon_facilities_technology.png) no-repeat center center;
+}
+
+.demo-2 .uc-container:nth-child(6) span.clickme {
+	background: transparent url(../userdata/icon_facilities_fulfillment.png) no-repeat center center;
+}
+
+.one span.clickme,
+.two span.clickme,
+.three span.clickme {
+    display: block;
+    float: left;
+    color: transparent;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.sfkLogo .scrollwrap,
+.one .scrollwrap,
+.two .scrollwrap,
+.three .scrollwrap {
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    overflow: hidden;
+    position: absolute;
+    color: #224092;
+    cursor: pointer;
+}
+
+.sfkLogo .scrollwrap h3,
+.one .scrollwrap h3,
+.two .scrollwrap h3,
+.three .scrollwrap h3 {
+    font-weight: normal;
+    font-size: 22px;
+    padding: 30px 0 10px 30px;
+    pointer-events: none;
+}
+
+.sfkLogo .scrollwrap p,
+.one .scrollwrap p,
+.two .scrollwrap p,
+.three .scrollwrap p {
+    font-size: 18px;
+    padding: 0 40px 0 40px;
+    pointer-events: none;
+}
+
+.sfkLogo .scrollwrap p.signature,
+.one .scrollwrap p.signature,
+.two .scrollwrap p.signature,
+.three .scrollwrap p.signature {
+    font-size: 20px;
+    padding: 10px 30px 0 30px;
+    text-align: right;
+    pointer-events: none;
+}
+
+.sfkLogo .close,
+.one .close,
+.two .close,
+.three .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-family: "Satisfy", cursive;
+    color: #224092;
+    cursor: pointer;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 14px;
+}

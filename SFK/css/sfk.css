@@ -1,0 +1,454 @@
+/* Reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;margin:0;padding:0;}fieldset,img{display:block; border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}ol,ul {list-style:none;}caption,th {text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym {border:0;}
+
+body {
+	background:#000;
+	font-size:14px;
+	font-family: 'Montserrat Hairline', arial;
+}
+b, strong {
+	font-weight:700;
+}
+em {
+	font-style:italic;
+}
+a {
+	text-decoration:none;
+}
+* {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+h1,h2,h3,h4 {
+	color:#3d3d3d;
+}
+h3 {
+	font-size:24px;
+}
+.triangleBG {
+	z-index:1;
+	position:fixed;
+	top:0;
+	left:0;
+}
+.wrapper {
+	height:100vh;
+	margin:0 auto;
+	z-index:2;
+}
+.headerWrapper {
+	width:100%;
+	max-width:640px;
+	display:block;
+	position:fixed;
+	top:300px;
+	left:50%;
+	transform:translateX(-50%);
+	-webkit-transform:translateX(-50%);
+	-ms-transform:translateX(-50%);
+	z-index:100;
+}
+.logo {
+	width:120px;
+	display:inline-block;
+	overflow:hidden;
+	vertical-align:middle;
+	position:relative;
+	margin-right:20px;
+	left:200px;
+}
+.miniLogo {
+	display:block;
+	width:100px;
+	position:fixed;
+	top:20px;
+	left:15px;
+	z-index:1;
+}
+.logo img,
+.miniLogo img {
+	width:100%;
+}
+.burgerMenu {
+	width:45px;
+	height:45px;
+	background:#000 url(../images/icon_burger.png) no-repeat center center;
+	background-size:20px 18px;
+	border-radius:50%;
+	display:block;
+	position:fixed;
+	bottom:20px;
+	right:20px;
+	cursor:pointer;
+	z-index:10;
+}
+.closeMenu {
+	width:35px;
+	height:35px;
+	background:url(../images/icon_close.png) no-repeat center center;
+	background-size:contain;
+	display:none;
+	position:fixed;
+	bottom:20px;
+	right:20px;
+	cursor:pointer;
+	z-index:1;
+}
+.separator {
+	width:1px;
+	height:100px;
+	background:#3d3d3d;
+	display:inline-block;	
+	vertical-align:middle;
+	margin-right:30px;
+	position:relative;
+}
+.title {
+	font-family: 'Montserrat', arial;
+	line-height:1;
+	display:inline-block;
+	vertical-align:middle;
+	position:absolute;
+	top:26px;
+	white-space:nowrap;
+}
+.title span {
+	font-size:16px;
+	text-transform:uppercase;
+}
+.title2 {
+	font-family: 'Montserrat', arial;
+	display:inline-block;
+	vertical-align:middle;
+	position:absolute;
+	top:32px;
+	white-space:nowrap;
+}
+.motto {
+	font-family: 'Montserrat', arial;
+	font-size:20px;
+	line-height:1.4;
+	white-space:nowrap;
+	display:inline-block;
+	vertical-align:middle;
+	position:absolute;
+	top:20px;
+}
+.mainNav {
+	width:100%;
+	display:block;
+	position:relative;
+	padding-left:20px;
+	z-index:20;
+}
+.mainNav ul li {
+	display:block;
+	margin-bottom:20px;
+}
+.mainNav ul li:last-child {
+	margin-bottom:0;
+}
+/*.mainNav ul li.active,
+.mainNav ul li:hover {
+	background:url(../images/icon_navtriangle.png) no-repeat top 9px right;
+}*/
+.mainNav ul li a {
+	font-family: 'Montserrat', arial;
+	font-size:14px;
+	color:#3d3d3d;
+	text-align:center;
+}
+.mainNav ul li a.active {
+	text-decoration:line-through;
+}
+.sideNav {
+	position:fixed;
+	top:135px;
+	left:50px;
+	z-index:10;
+}
+.sideNav ul li {
+	width:120px;
+	display:block;
+	margin-bottom:20px;
+}
+.sideNav ul li:last-child {
+	margin-bottom:0;
+}
+.sideNav ul li.active a,
+.sideNav ul li:hover a {
+	color:#808080;
+}
+.sideNav ul li a {
+	font-family: 'Montserrat Light', arial;
+	font-size:18px;
+	color:#4d4d4d;
+	text-align:center;
+}
+section {
+	width:70%;
+	display:block;
+	position:absolute;
+	top:40%;
+	right:0;
+	z-index:1;
+	padding-bottom:50px;
+}
+.theContent{
+	display:none;
+}
+section .caption {
+	font-family: 'Montserrat Light', arial;
+	color:#808080;
+	position:relative;
+	display:block;
+	margin:0 auto;
+	padding-right:120px;
+}
+section .caption h2 {
+	font-size:64px;
+	margin-right:10px;
+	margin-bottom:30px;
+	display:inline-block;
+}
+section .caption h4 {
+	font-size:32px;
+	display:inline-block;
+}
+section .caption p {
+	line-height:2;
+}
+section .caption a {
+	color:#808080;
+	text-decoration:underline;
+}
+section .caption .contactList {
+	line-height:2;
+	padding-left:60px;
+	margin-top:10px;
+	display:block;
+}
+section .caption .contactList .country {
+	text-transform:uppercase;
+}
+/*.backBtn {
+	background:url(../images/icon_multipletriangle.png) no-repeat center left;
+	background-size:contain;
+	font-size:18px;
+	color:#808080;
+	padding-left:40px;
+	display:inline-block;
+	z-index:100;
+}
+section#why .backBtn {
+	float:right;
+	margin:50px 50px 0 0;
+}*/
+section#network .company {
+	display:block;
+	margin-bottom:30px;
+}
+section#network .companyLogo {
+	width:200px;
+	display:block;
+	margin-bottom:20px;
+}
+section#network .companyLogo img {
+	width:100%;
+}
+section#network .company ul li {
+	list-style:inside square;
+	margin-bottom:5px;
+	padding-left:5px;
+	display:list-item;
+}
+section#who .profilePanel {
+	display:block;
+	overflow:hidden;
+	margin-bottom:20px;
+}
+section#who .profilePanel .profileImg {
+	width:30%;
+	max-width:300px;
+	float:left;
+}
+section#who .profilePanel .profileImg img {
+	width:100%;
+}
+section#who .profilePanel .profileData {
+	width:70%;
+	padding:10px 10px 10px 20px;
+	float:left;
+}
+section#who .profilePanel .profileData span {
+	text-transform:uppercase;
+	margin-bottom:10px;
+	display:block;
+}
+section#who .profilePanel .profileData ul {
+	padding-left:60px;
+}
+section#who .profilePanel .profileData ul li {
+	list-style:inside square;
+	margin-bottom:5px;
+}
+section#exp .country {
+	margin-bottom:30px;
+}
+section#exp .country ul li {
+	margin-bottom:20px;
+}
+section#exp .country ul li a {
+	text-transform:uppercase;
+	padding:10px;
+	display:inline-block;
+	text-decoration:none;
+}
+section#exp .country ul li.active a {
+	background:#3d3d3d;
+}
+section#exp .country ul li .partner {
+	max-width:200px;
+	position:relative;
+	top:-29px;
+	left:200px;
+	display:none;
+}
+/*section#exp .country ul li.active .partner {
+	display:block;
+}*/
+section#exp .country ul li .partner li {
+	font-size:12px;
+	padding:0;
+	margin-bottom:5px;
+	display:block;
+	white-space:nowrap;
+	text-transform:none;
+}
+
+@media only screen and (max-width:960px){
+section .caption {
+	padding:0 20px;
+}
+}
+
+@media only screen and (max-width:768px){
+.headerWrapper {
+	max-width:none;
+	height:100vh;
+	top:0;
+	padding-top:300px;
+}
+.logo {
+	width:120px;
+	left:50%;
+	transform:translateX(-50%);
+	-webkit-transform:translateX(-50%);
+	-ms-transform:translateX(-50%);
+	display:block;
+}
+.separator {
+	width:200px;
+	height:1px;
+	display:block;
+	margin:0 auto 30px;
+}
+.title,
+.title2 {
+	font-size:16px;
+	display:block;
+	top:320px;
+	left:50%;
+	transform:translateX(-50%);
+	-webkit-transform:translateX(-50%);
+	-ms-transform:translateX(-50%);
+	text-align:center;
+}
+.title span {
+	font-size:12px;
+}
+.motto {
+	font-size:16px;
+	display:block;
+	top:320px;
+	left:50%;
+	transform:translateX(-50%);
+	-webkit-transform:translateX(-50%);
+	-ms-transform:translateX(-50%);
+}
+.mainNav {
+	max-width:100%;
+	padding:0;
+	text-align:center;
+	left:auto;
+}
+.mainNav.sideMenu {
+	background:#000;
+	width:100%;
+	height:100vh;
+	position:fixed;
+	top:0;
+	padding:50px 10px;
+}
+section {
+	width:100%;
+	text-align:center;
+	top:auto;
+	right:auto;
+	padding-top:50px;
+	padding-bottom:60px;
+}
+section .caption {
+	padding:0 20px;
+}
+#chat .caption p {
+	margin-bottom:30px;
+}
+section#network .companyLogo {
+	margin:0 auto 20px;
+}
+section#network .company ul li {
+	padding:0;
+}
+section#who .profilePanel {
+	margin-bottom:50px;
+}
+section#who .profilePanel .profileImg {
+	width:100%;
+	margin:0 auto 20px;
+	float:none;
+}
+section#who .profilePanel .profileData {
+	width:100%;
+	padding:0;
+	margin:0 auto;
+	float:none;
+}
+section#who .profilePanel .profileData ul {
+	padding:0;
+}
+section#exp .country ul li .partner {
+	top:0;
+	left:auto;
+	margin:20px auto 0;
+}
+section .caption .contactList {
+	padding:0;
+}
+}
+
+@media only screen and (max-width:480px){
+.miniLogo {
+	width:80px;
+}
+.motto {
+	font-size:12px;
+}
+section .caption p {
+	font-size:16px;
+}
+section .caption .contactList {
+	font-size:14px;
+}
+}
