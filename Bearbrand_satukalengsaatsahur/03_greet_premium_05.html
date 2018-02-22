@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Bear Brand | Buat Ucapan</title>
+<meta name="viewport" content="target-densitydpi=device-dpi; width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+<meta name="HandheldFriendly" content="true" />
+<link rel="stylesheet" type="text/css" href="css/fontAttach/fontattach.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
+<link rel="stylesheet" type="text/css" href="css/bearbrand.css">
+<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script>
+	$( function() {
+		$( "#templateTabs" ).tabs({
+			active: 0
+		}).tabs("option","disabled", [0, 1,2]);
+	});
+	$(document).ready(function(){
+		hair = $('.sliderhair').bxSlider({
+			pager: false,
+			// set active slide
+			onSliderLoad: function () {
+				$('.sliderhair > li').eq(1).addClass('active')
+			},
+			onSlideAfter: function ($slideElement, oldIndex, newIndex) {
+				$('.slide').removeClass('active');
+				$($slideElement).addClass('active');        
+			}
+		});
+		
+		$('#hair').on('click', function(e) {
+		  e.preventDefault();
+		  setTimeout(function() {
+			hair.redrawSlider();
+		  }, 0);
+		});
+	
+		$('#cloth').on('click', function(e) {
+		  e.preventDefault();
+		  setTimeout(function() {
+			cloth.redrawSlider();
+		  }, 0);
+		});
+		
+		$('#envi').on('click', function(e) {
+		  e.preventDefault();
+		  setTimeout(function() {
+			envi.redrawSlider();
+		  }, 0);
+		});
+		
+		leftPremium = $('.previewBox').height() + 2;
+		if ($(window).width() > 768){
+			$('#templateTabs').css('min-height',leftPremium);
+		}
+	});
+	
+	$(window).bind('resize', function(){
+		leftPremium = $('.previewBox').height() + 2;
+		if ($(window).width() > 768){
+			$('#templateTabs').css('min-height',leftPremium);
+		}
+	});
+</script>
+</head>
+
+<body>
+	<div class="wrapper">
+    	<header>
+        	<a href="index.html" class="bbFlag"></a>
+            <nav>
+                <ul>
+                    <li><a href="04_gallery.html">gallery</a></li>
+                    <li class="active"><a href="02_greet_01.html">buat ucapan</a></li>
+                    <li><a href="#">cara main</a></li>
+                    <li><a href="05_promo_01.html">promo</a></li>
+                    <li><a href="06_activity_01.html">activity</a></li>
+                    <li><a href="1KSS_home.html">1 kaleng saat sahur</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="burgerIcon"></a>
+        </header>
+        <section>
+        	<div class="greet">
+            	<div class="contentFloat mobile">
+                	<div class="galleryPreview template">
+                    	<h5 class="blue regFont">Kartu Ucapan Kamu</h5>
+                        <div class="templateWrapper fullBox">
+                            <div id="templateTabs">
+                                <ul class="tabs">
+                                    <li><a href="#tabs-1" class="regFont tabs" id="hair">Rambut</a></li>
+                                    <li><a href="#tabs-2" class="regFont tabs" id="cloth">Baju</a></li>
+                                    <li><a href="#tabs-3" class="regFont tabs" id="envi">Scenery</a></li>
+                                </ul>
+                                <div id="tabs-1">
+                                	<ul class="sliderhair">
+                                    	<li class="slide"><img class="black_hair" src="../userdata/img_template_chara1.png"></li>
+                                        <li class="slide"><img class="blonde_hair" src="../userdata/img_template_chara4.png"></li>
+                                    </ul>
+                                    <a href="#" class="defBtn blueBG" id="setHair">Set Hair</a>
+                                </div>
+                                <div id="tabs-2">
+                                	<ul class="slidercloth">
+                                    	<li class="slide black_cloth"><img alt="img_template_chara1.png" src="../userdata/img_template_chara1.png"></li>
+                                        <li class="slide black_cloth"><img alt="img_template_chara2.png"  src="../userdata/img_template_chara2.png"></li>
+                                    	<li class="slide black_cloth"><img alt="img_template_chara3.png"  src="../userdata/img_template_chara3.png"></li>
+                                    	<li class="slide blonde_cloth"><img alt="img_template_chara4.png"  src="../userdata/img_template_chara4.png"></li>
+                                        <li class="slide blonde_cloth"><img alt="img_template_chara5.png"  src="../userdata/img_template_chara5.png"></li>
+                                    	<li class="slide blonde_cloth"><img alt="img_template_chara6.png"  src="../userdata/img_template_chara6.png"></li>
+                                    </ul>
+                                    <a href="#" class="defBtn blueBG" id="setCloth">Set Cloth</a>
+                                </div>
+                                <div id="tabs-3">
+                                	<ul class="sliderenvi">
+                                        <li class="slide"><img alt="img_scenery1.png" src="../userdata/img_scenery1.png"></li>
+                                        <li class="slide"><img alt="img_scenery2.png" src="../userdata/img_scenery2.png"></li>
+                                    </ul>
+                                    <a href="#" class="defBtn blueBG" id="setAll">Finish</a>
+                                </div>
+                            </div>
+                            <div class="previewBox">
+                            	<img src="../userdata/img_template_preview.jpg">
+                                <div class="bbFlag mini"></div>
+                                <p class="regFont">
+                                    <span class="boldFont">Hai, Kak Glen!</span><br>
+                                    Kak, jaga kondisi kamu ya<br>
+                                    biar kuat puasanya tahun ini!<br><br>
+                                    Selalu minum,<br>
+                                    <span class="medFont"><i>#1KalengSaatSahur</i></span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="fullBox buttonWrapper">
+                            <a href="#" class="defBtn redBG">DOWNLOAD YOUR IMAGE</a>
+                            <a href="#" class="defBtn redBG">SHARE ON TWITTER</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+        	<p class="white">Copyright &copy; 2017 Nestle Corp. All Rights Reserved</p>
+        </footer>
+    </div>
+</body>
+</html>
